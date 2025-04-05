@@ -1,0 +1,65 @@
+<!DOCTYPE html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TinyDropdown 2 - animated javascript dropdown</title>
+<link rel="stylesheet" href="tinydropdown.css" type="text/css">
+<script type="text/javascript" src="tinydropdown.js"></script>
+<body>
+
+
+	<div class="nav">
+    <ul id="menu" class="menu">
+        <li class="nodiv"><a href="#">Home</a></li>
+        <li><a href="#">One</a>
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li class="submenu">
+                    <a href="#">Three</a>
+                    <ul>
+                        <li class="noborder"><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                    </ul>
+                </li>      
+            </ul>
+        </li>
+        <li><span>Two</span>
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li class="submenu">
+					<span>No Link</span><ul>
+                		<li class="noborder"><a href="#">One</a></li>
+                		<li><a href="#">Two</a></li>
+                		<li><a href="#">Three</a></li>
+                		<li><a href="#">Four</a></li>
+                		<li><a href="#">Five</a></li>
+					</ul>
+				</li>
+                <li><a href="#">Five</a></li>
+                <li><a href="#">Six</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Three</a>
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Four</a>
+            <ul id="info">
+				<li>
+                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nulla, malesuada in porta vitae, fermentum ac nulla.</p>
+				</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+var dropdown=new TINY.dropdown.init("dropdown", {id:'menu', active:'menuhover'});
+</script>
+</body>
+</html>

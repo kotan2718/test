@@ -1,0 +1,28 @@
+<!DOCTYPE html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+<title>TinyDropdown 2 - animated javascript dropdown</title>
+<link rel="stylesheet" href="tinydropdown.css" type="text/css">
+<script type="text/javascript" src="tinydropdown.js"></script>
+<body>
+
+
+	<div class="nav">
+    <ul id="menu" class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">The Scenery</a>
+            <ul>
+                <li><a href="#">Screen Shots</a></li>
+                <li><a href="#">Snap Shots</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+var dropdown=new TINY.dropdown.init("dropdown", {id:'menu', active:'menuhover'});
+</script>
+</body>
+</html>

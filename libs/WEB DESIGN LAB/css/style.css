@@ -1,0 +1,56 @@
+.dropdownmenu {
+	float: left;
+	width: 100px;
+	height: 125px;
+}
+#ddm {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#ddm li {
+	display: block;
+	width: 100px;
+	height: 25px;
+	border: solid 2px #fff;			/* <- 各cellどうしの 間隔に相当 */
+	text-align: left;
+	padding: 0 0 0 0px;
+	background: #e3e4e5;				/* <- マウスオーバー時の cell の BGcolor */
+}
+#ddm li a {
+	display: block;
+	width: 90px;								/* <- cell の 横幅 */
+	height: 25px;
+	color: #000080;							/* <- デフォルト文字色 */
+	font-size: 12px;
+	line-height: 2.1;
+	font-family: sans-serif;					/* <- 文字 の 書体 */
+	text-decoration: none;
+	background: #f2f2f3;				/* <- cell の デフォルト BGcolor */
+	padding: 0 0 0 10px;				/* <- テキストの左端からの間隔 */
+}
+#ddm li a:hover {
+	display: block;
+	width: 100px;
+	height: 25px;
+	color: #1111c3;							/* <- 選択時の文字色 */
+	text-decoration: none;
+	background: none;
+}
+#ddm ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#ddm li ul {
+	display: none;
+}
+#ddm li:hover ul {
+	display: block;
+	position: relative;
+	top: -28px;									/* <- サブメニューの cell 位置 高さ */
+	left: 102px;								/* <- サブメニューの cell 位置 左端 */
+	width: 100px;
+	height: 25px;
+}
+

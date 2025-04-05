@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>JQuery Cycle Plugin - Beginner Demos</title>
+<link rel="stylesheet" type="text/css" media="screen" href="../jq.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="cycle.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="http://malsup.github.com/chili-1.7.pack.js"></script>
+<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$(function() {
+    // run the code in the markup!
+    $('td pre code').each(function() {
+        eval($(this).text());
+    });
+});
+</script>
+</head>
+<body>
+<div><a id="logo" href="http://jquery.com" title="Powered By jQuery"></a></div>
+<h1 id="banner"><a id="backnav" href="./">&lsaquo;&lsaquo; cycle home</a>jQuery Cycle Plugin - Beginner Demos</h1>
+<h2 id="header"><a href="download.html">Download the Cycle Plugin</a></h2>
+<div id="main">
+
+<div id="demos">
+    <h1>1 - Define Your Markup and Styles</h1>
+    <p>
+    All of the examples on this page use the following markup and CSS:
+    </p>
+    <pre><code class="mix">&lt;div class="pics"&gt;
+    &lt;img src="images/beach1.jpg" width="200" height="200" /&gt;
+    &lt;img src="images/beach2.jpg" width="200" height="200" /&gt;
+    &lt;img src="images/beach3.jpg" width="200" height="200" /&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="mix">.pics { 
+    height:  232px; 
+    width:   232px; 
+    padding: 0; 
+    margin:  0; 
+}
+
+.pics img { 
+    padding: 15px; 
+    border:  1px solid #ccc; 
+    background-color: #eee; 
+    width:  200px;
+    height: 200px;
+    top:  0;
+    left: 0
+}
+</code></pre>
+    
+    <h1>2 - Choose an Effect</h1>
+    <p>You can choose from any of the following named effects: 
+    <ul>
+        <li><code>blindX</code></li>
+        <li><code>blindY</code></li>
+        <li><code>blindZ</code></li>
+        <li><code>cover</code></li>
+        <li><code>curtainX</code></li>
+        <li><code>curtainY</code></li>
+        <li><code>fade</code></li>
+        <li><code>fadeZoom</code></li>
+        <li><code>growX</code></li>
+        <li><code>growY</code></li>
+        <li><code>scrollUp</code></li>
+        <li><code>scrollDown</code></li>
+        <li><code>scrollLeft</code></li>
+        <li><code>scrollRight</code></li>
+        <li><code>scrollHorz</code></li>
+        <li><code>scrollVert</code></li>
+        <li><code>shuffle</code></li>
+        <li><code>slideX</code></li>
+        <li><code>slideY</code></li>
+        <li><code>toss</code></li>
+        <li><code>turnUp</code></li>
+        <li><code>turnDown</code></li>
+        <li><code>turnLeft</code></li>
+        <li><code>turnRight</code></li>
+        <li><code>uncover</code></li>
+        <li><code>wipe</code></li>
+        <li><code>zoom</code></li>
+    </ul>
+    You specify the effect name by either passing a string to the <code>cycle</code> method or 
+    by using an options object and setting the <strong><code>fx</code></strong> property
+    to the name of the desired effect.
+    </p>
+
+    <table cellspacing="20"><tr><td>
+        <div id="s1" class="pics">
+            <img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" />
+        </div>
+        <pre><code class="mix">$('#s1').cycle('fade');</code></pre>
+        </td><td>
+        <div id="s2" class="pics">
+            <img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" />
+        </div>
+        <pre><code class="mix">$('#s2').cycle({
+    fx: 'scrollDown'
+});</code></pre>
+        </td></tr>
+    </table>        
+    
+    <h1>3 - Choose Speed and Timeout Values</h1>
+    <p>Next you may want to choose speed and timeout values to control how fast and how often the
+    slide transitions occur.  The <code>speed</code> option defines the number of milliseconds it
+    will take to transition from one slide to the next.  The <code>timeout</code> option 
+    specifies how many milliseconds will elapse between the start of each transition.
+    </p>
+    
+    <table cellspacing="20">
+    <tr><td>
+        <div id="s3" class="pics">
+            <img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" />
+        </div>
+        <pre><code class="mix">$('#s3').cycle({
+    fx:    'fade',
+    speed:  2500
+ });</code></pre>
+    </td><td>
+        <div id="s4" class="pics">
+            <img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" />
+        </div>
+        <pre><code class="mix">$('#s4').cycle({
+    fx:      'scrollDown',
+    speed:    300,
+    timeout:  2000
+});</code></pre>
+    </td></tr>
+    </table>
+    
+    <h1>4 - Choose Other Options</h1>
+    <p>There are many other options to choose from. Two that you may find useful are
+    <code>pause</code> and <code>random</code>.  The <code>pause</code> option causes 
+    the slideshow to pause when the mouse hovers over the slide.  
+    The <code>random</code> option causes the slides to be shown in
+    random order, rather than sequential.
+    </p>
+    <table cellspacing="20">
+    <tr><td>
+        <div id="s5" class="pics">
+            <img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" />
+        </div>
+        <pre><code class="mix">$('#s5').cycle({
+    fx:    'fade',
+    pause:  1
+});</code></pre>
+    </td><td>
+        <div id="s6" class="pics">
+            <img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200" />
+            <img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" />
+        </div>
+        <pre><code class="mix">$('#s6').cycle({
+    fx:     'scrollDown',
+    random:  1
+});</code></pre>
+    </td></tr>        
+    </table>
+<h1>Things to Keep in Mind</h1>
+<p>
+- CSS Rules! When building your slideshows, remember that animation effects work best
+when both the container and slide have a fixed box.
+</p>
+<p>- Remember that every child element of the container becomes a slide!</p>
+</div>
+<hr />
+Next up: <a href="int.html">Intermediate Demo (Part 1) &rsaquo;&rsaquo;</a>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-850242-2";
+urchinTracker();
+</script>
+</body>
+</html>

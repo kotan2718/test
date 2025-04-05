@@ -1,0 +1,32 @@
+/* ホバー時のポップアップ(簡単な説明とリンク先の表示) */
+
+/* 通常時のリンクスタイル */
+.hover-link {
+    text-decoration: none; /* 下線なし */
+    color: darkgreen; /* 通常時の色 */
+    cursor: pointer;
+}
+
+/* ホバー時やポップアップ表示中に赤にする */
+.hover-link:hover,
+.hover-link.active {
+    color: red;
+}
+
+#popup {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+#popup a {
+    display: block;
+    margin-top: 5px;
+    color: blue;
+}
+

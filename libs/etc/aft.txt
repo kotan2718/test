@@ -1,0 +1,146 @@
+function changeType() {
+    const type = String(document.getElementById('type').value);
+    const typeAry = type.split('&');
+
+    const selectMode = document.getElementById('mode');
+
+    document.getElementById('where').innerText = "";
+
+    // 係数入力ボックスを表示する
+    dispCoef(1);
+
+    // 方程式入力ボックスを表示する
+    dispFormula(0);
+
+    switch (typeAry[0]) {
+        case "01":  // 2次元1次線形自励系
+            selectMode.selectedIndex = 2;
+            mode = 2;
+            dat = 1;
+            switch (typeAry[1]) {
+                case "01":  // 固有値の1つが0の場合
+                    changeProperty(0);
+                    document.getElementById('ma').value = 1;
+                    document.getElementById('mb').value = 1;
+                    document.getElementById('mc').value = 2;
+                    document.getElementById('md').value = 2;
+                    setRange();
+                    break;
+                default:
+                    break;
+            }
+            document.getElementById('ma').disabled = false;
+            document.getElementById('mb').disabled = false;
+            document.getElementById('mc').disabled = false;
+            document.getElementById('md').disabled = false;
+            ma_used = 1;
+            mb_used = 1;
+            mc_used = 1;
+            md_used = 1;
+
+            // 現在表示されているurlを取得して、日本語ページか英語ページかの振り分けを行う
+            const urlHere = window.location.href;
+
+            // 式を表示する
+            document.getElementById('dx').innerText = "\\[ \\frac{dx}{dt} = ax + by \\]";
+            document.getElementById('dy').innerText = "\\[ \\frac{dy}{dt} = cx + dy \\]";
+
+            // 段落のクラスを設定する
+            changeParagraphClasses(true);
+
+            break;
+
+        case "09":  // ユーザー定義
+            selectMode.selectedIndex = 2;
+            mode = 2;
+            switch (typeAry[1]) {
+                case "09":
+                    dat = 99;
+                    changeProperty(0);
+
+                    // 式を非表示にする
+                    document.getElementById('dx').innerText = "";
+                    document.getElementById('dy').innerText = "";
+                    document.getElementById('where').innerText = "";
+
+                    // 方程式入力ボックスを表示する
+                    dispFormula(1);
+
+                    // 式を評価する
+
+                    // 20240513 add for user definition
+                    formula_dx = document.getElementById('dxdt').value;
+                    formula_dy = document.getElementById('dydt').value;
+                    formula_where = document.getElementById('dxdy_where').value;
+
+                    // 式を表示する
+                    node_dx = math.parse(formula_dx);
+                    node_dy = math.parse(formula_dy);
+                    node_where = math.parse(formula_where);
+
+                    var dxTex = "\\frac{dx}{dt} &=& " + node_dx.toTex();
+                    var dyTex = "\\frac{dy}{dt} &=& " + node_dy.toTex();
+                    var whereTex = "r = " + node_where.toTex();
+
+                    // "\cdot" を削除する
+                    dxTex = dxTex.replace(/\\cdot/g, "");
+                    dyTex = dyTex.replace(/\\cdot/g, "");
+                    whereTex = whereTex.replace(/\\cdot/g, "");
+
+                    // 長い式を分割
+                    var maxLineLength = 50; // 最大文字数（調整可能）
+                    var splitDxTex = splitLongTex(dxTex, maxLineLength);
+                    var splitDyTex = splitLongTex(dyTex, maxLineLength);
+
+                    document.getElementById('dx').innerHTML = "\\[ \\begin{eqnarray*}" + splitDxTex + "\\end{eqnarray*} \\]";
+                    document.getElementById('dy').innerHTML = "\\[ \\begin{eqnarray*}" + splitDyTex + "\\end{eqnarray*} \\]";
+                    if (whereTex == "r = undefined") {
+                        document.getElementById('where').innerHTML = "$\\;$ where, $\\;r = $ unused";
+                    } else {
+                        document.getElementById('where').innerHTML = "$\\;$ where, $\\;" + whereTex + "$";
+                    }
+
+                    // data set
+                    document.getElementById('width0').value = 3.2;
+                    document.getElementById('cnt_dp').value = 1280;
+                    document.getElementById('dh').value = 0.001;
+
+                    // 係数入力ボックスを非表示にする
+                    dispCoef(0);
+
+                    updateRange();
+                    break;
+                default:
+                    break;
+            }
+
+            // 段落のクラスを設定する
+            changeParagraphClasses(false);
+
+            break;
+    }
+
+    // 描画領域をリセット
+    ctx.fillStyle = 'rgb( 0, 0, 0)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // 他の処理が終わった後にMathJaxを再度実行する
+    TeX();
+}
+
+function changeParagraphClasses(isDefaultEquation) {
+    const p1 = document.getElementById('paragraph1');
+    const p2 = document.getElementById('paragraph2');
+
+    if (isDefaultEquation) {
+        p1.classList.add('pb10');
+        p2.classList.add('pb15');
+        p1.classList.remove('pb0', 'pbMinus10');
+        p2.classList.remove('pb0', 'pbMinus10');
+    } else {
+        p1.classList.remove('pb10', 'pb15');
+        p2.classList.remove('pb10', 'pb15');
+        p1.classList.add('pb0');
+        p2.classList.add('pb0');
+    }
+}

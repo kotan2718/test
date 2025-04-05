@@ -1,0 +1,103 @@
+function changeType() {
+    const type = String(document.getElementById('type').value);
+    const typeAry = type.split('&');
+    const selectMode = document.getElementById('mode');
+    document.getElementById('where').innerText = "";
+
+    // 係数入力ボックスを表示する
+    dispCoef(1);
+
+    // 方程式入力ボックスを表示する
+    dispFormula(0);
+
+    switch (typeAry[0]) {
+        case "01":  // 2次元1次線形自励系
+            selectMode.selectedIndex = 2;
+            mode = 2;
+            dat = 1;
+            switch (typeAry[1]) {
+                case "01":  // 固有値の1つが0の場合
+                    changeProperty(0);
+                    document.getElementById('ma').value = 1;
+                    document.getElementById('mb').value = 1;
+                    document.getElementById('mc').value = 2;
+                    document.getElementById('md').value = 2;
+                    setRange();
+                    changeParagraphClasses(true); // デフォルトの方程式を選択
+                    break;
+                default:
+                    break;
+            }
+            document.getElementById('ma').disabled = false;
+            document.getElementById('mb').disabled = false;
+            document.getElementById('mc').disabled = false;
+            document.getElementById('md').disabled = false;
+            ma_used = 1;
+            mb_used = 1;
+            mc_used = 1;
+            md_used = 1;
+
+            // 式を表示する
+            document.getElementById('dx').innerText = "\\[ \\frac{dx}{dt} = ax + by \\]";
+            document.getElementById('dy').innerText = "\\[ \\frac{dy}{dt} = cx + dy \\]";
+            break;
+
+        case "09":  // ユーザー定義
+            selectMode.selectedIndex = 2;
+            mode = 2;
+            switch (typeAry[1]) {
+                case "09":
+                    dat = 99;
+                    changeProperty(0);
+                    // 式を非表示にする
+                    document.getElementById('dx').innerText = "";
+                    document.getElementById('dy').innerText = "";
+                    document.getElementById('where').innerText = "";
+                    // 方程式入力ボックスを表示する
+                    dispFormula(1);
+
+                    // 20240513 add for user definition
+                    formula_dx = document.getElementById('dxdt').value;
+                    formula_dy = document.getElementById('dydt').value;
+                    formula_where = document.getElementById('dxdy_where').value;
+
+                    var dxTex = "\\frac{dx}{dt} &=& " + math.parse(formula_dx).toTex();
+                    var dyTex = "\\frac{dy}{dt} &=& " + math.parse(formula_dy).toTex();
+                    var whereTex = "r = " + math.parse(formula_where).toTex();
+
+                    dxTex = dxTex.replace(/\\cdot/g, "");
+                    dyTex = dyTex.replace(/\\cdot/g, "");
+                    whereTex = whereTex.replace(/\\cdot/g, "");
+
+                    var maxLineLength = 50;
+                    var splitDxTex = splitLongTex(dxTex, maxLineLength);
+                    var splitDyTex = splitLongTex(dyTex, maxLineLength);
+
+                    document.getElementById('dx').innerHTML = "\\[ \\begin{eqnarray*}" + splitDxTex + "\\end{eqnarray*} \\]";
+                    document.getElementById('dy').innerHTML = "\\[ \\begin{eqnarray*}" + splitDyTex + "\\end{eqnarray*} \\]";
+                    if (whereTex == "r = undefined") {
+                        document.getElementById('where').innerHTML = "$\\;$ where, $\\;r = $ unused";
+                    } else {
+                        document.getElementById('where').innerHTML = "$\\;$ where, $\\;" + whereTex + "$";
+                    }
+
+                    document.getElementById('width0').value = 3.2;
+                    document.getElementById('cnt_dp').value = 1280;
+                    document.getElementById('dh').value = 0.001;
+                    dispCoef(0);
+                    changeParagraphClasses(false); // ユーザー定義の方程式を選択
+
+                    updateRange();
+                    break;
+                default:
+                    break;
+            }
+    }
+
+    // 描画領域をリセット
+    ctx.fillStyle = 'rgb( 0, 0, 0)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // 他の処理が終わった後にMathJaxを再度実行する
+    TeX();
+}

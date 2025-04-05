@@ -1,0 +1,375 @@
+/* 画面の余白を取り払う */
+/*
+* {margin:0; padding:0; outline:0}
+*/
+
+/* index page layout */
+
+/** table whole **/
+div#table_whole {  
+	display: table; 
+	height: 100%;  
+	width: 100%; 
+	background: #FFF; 
+	border-collapse:collapse; 
+	border:0px solid gray; 
+} 
+	* html div#table_whole {		/* * html : for IE7 */ 
+		position: relative; 
+	} 
+	*+html div#table_whole {		/* *+html : for less than equal IE6 */  
+		position: relative; 
+	} 
+
+/** table left **/
+div#table_left {  
+	display: table-cell; 
+	vertical-align: middle; 
+	width: 230px; 
+	text-align: center; 
+	border: 0px solid gray; 
+} 
+	* html div#table_left { 
+		position: absolute; 
+		top: 12%; 
+	} 
+	*+html div#table_left { 
+		position: absolute; 
+		top: 12%; 
+	} 
+
+div#table_partition { 
+	display: table-cell; 
+	width: 2px; 
+	background-color: #cccccc; 
+	} 
+	* html div#table_partition { 
+		position: absolute; 
+		left: 230px; 
+		width: 2px; 
+		height:760px; 
+		top:40px;
+		background-color: #ccc; 
+	} 
+	*+html div#table_partition { 
+		position: absolute; 
+		left: 230px; 
+		width: 2px; 
+		height:760px; 
+		top:40px;
+		background-color: #ccc; 
+	} 
+
+/** table partition **/
+/*
+div#table_partition { 
+		position: absolute; 
+		left: 230px; 
+		width: 2px; 
+		top: 40px;
+		height:750px; 
+		background-color: #ccc; 
+	} 
+*/
+/** table right  **/
+div#table_right { 
+	display: table-cell; 
+	vertical-align: middle; 
+	text-align: center; 
+	border: 0px solid gray; 
+} 
+	* html div#table_right { 
+		position: absolute; 
+		left: 230px; 
+		top: 2%; 
+		width: 80%; 
+	} 
+	*+html div#table_right { 
+		position: absolute; 
+		left: 230px; 
+		top: 2%; 
+		width: 80%; 
+	} 
+
+/* window left */
+
+/* index title */
+p#index_title{ 
+	width: 230px; 
+	margin:  0; 
+	padding: 0px 0 20px 0; 
+	text-align: center; 
+	font-family: 'Times New Roman', serif; 
+	color: #000080; 
+	font-size: 180%; 
+	font-weight: bold;
+} 
+/* Japanese English title */
+p.index_je{ 
+	text-align: left; 
+	margin:  0; 
+	padding: 15px 0 4px 5px; 
+	font-family: 'Times New Roman', serif; 
+	color: #808080; 
+	font-size: 100%; 
+	font-weight: bold;
+} 
+
+/* navigation */
+
+/*	フォーカスリングの非表示
+*/
+	a:focus {outline:none; } 
+
+
+/** ul set up **/
+.nav-ul {
+	list-style-type: none; 
+	margin:  0; 
+	padding: 0 5px 0 10px;
+	border: solid 0px #ccc; 
+}
+
+/** li set up left side "What's New", "Links"... **/
+.nav-left {
+	float: left;
+	margin:  0; 
+	padding: 2px 0 3px 0;
+	border: solid 0px #ccc; 
+}
+
+/** li set up left side navigation img  **/
+.nav-left-img {
+	vertical-align: bottom;
+}
+
+/** li set up right side "NEW", "UPDATE" **/
+.nav-right-s { /* left side single */ 
+	float: left;
+	margin:  0; 
+	padding: 2px 0 3px 5px;
+	border: solid 0px #ccc; 
+}
+
+.nav-right-m { /* left side multi */ 
+	float: left;
+	margin:  0; 
+	padding: 15px 0 3px 5px;
+	border: solid 0px #ccc; 
+}
+
+/** li set up right side navigation img "NEW", "UPDATE" **/
+.nav-right-img {
+	vertical-align: bottom;
+}
+
+/* float のクリア */
+.c-both { clear: both; }
+
+/* index logo */
+p#index_logo{ 
+	text-align: center; 
+	margin:  0; 
+	padding: 50px 0 20px 0; 
+} 
+	* html p#index_logo { 
+	text-align: center; 
+	margin:  0; 
+	padding: 30px 0 20px 0; 
+	} 
+	*+html p#index_logo { 
+	text-align: center; 
+	margin:  0; 
+	padding: 30px 0 20px 0; 
+	} 
+
+/* date */
+p#index_date{ 
+	text-align: center; 
+	margin:  0; 
+	padding: 15px 5px 15px 0; 
+	font-family: Arial, Helvetica, sans-serif;
+	color: #808080; 
+	font-size: 100%; 
+	font-weight: normal;
+} 
+
+/* about Kz */
+p#about_Contral{ 
+	font-family: Arial, Helvetica, sans-serif;
+	color: #808080; 
+	font-size: small; 
+/*
+	font-weight: normal;
+*/
+	margin: 0 0 15px 0; 
+	padding: 0; 
+	text-align: center; 
+} 
+
+/* copyright */
+p#index_copyright{ 
+	text-align: center; 
+	margin:  0; 
+	padding: 0 5px 0 0; 
+	font-family: Arial, Helvetica, sans-serif;
+	color: #999; 
+	font-size: 60%; 
+	font-weight: normal;
+} 
+
+/* window right */
+
+/* main title */
+p#main_title{ 
+	margin: 0; 
+	padding: 50px 0 0 0; 
+	text-align: center; 
+} 
+
+/* main picture */
+p#main_pic{ 
+	margin:  0; 
+	padding: 30px 0 0px 0; 
+	text-align: center; 
+} 
+
+/* 2nd logo */
+p#logo2 {
+	font-family:  'Times New Roman', serif; 
+	color: #808080; 
+	font-size: 125%; 
+	font-weight: bold;
+	width:230px;
+	height:20px;
+	margin:  20px auto 25px auto; 
+	padding: 0; 
+	text-align: center; 
+}
+
+/* 3 columns for sc_Tuamotu Group Top, Each Island
+*/
+div#three-col {
+	font-family:  'Times New Roman', serif; 
+	color: #808080; 
+	font-size: small; 
+	font-weight: bold;
+	width: 512px;
+	margin: 0 auto;
+	padding: 0; 
+	text-align: center; 
+	border: solid 0px #ccc; 
+}
+	/* left, right side */
+.col_upper_rl {
+	width: 164px; 
+	margin: 0 auto;
+	padding: 0; 
+	display: inline-block; 
+	* display: inline; 
+	* zoom: 1; 
+	vertical-align: middle;
+	border: solid 0px #ccc; 
+} 
+	/* center */
+.col_upper_c {
+	font-size: medium; 
+	width: 138px; 
+	margin:  0 auto;
+	padding: 0; 
+	display: inline-block; 
+	* display: inline; 
+	* zoom: 1; 
+	vertical-align: middle; 
+	border: solid 0px #ccc; 
+}
+	/* left, right side */
+.col_lower_rl {
+	width: 164px; 
+	margin: 0 auto;
+	padding: 0; 
+	display: inline-block; 
+	* display: inline; 
+	* zoom: 1; 
+	vertical-align: top;
+	border: solid 0px #ccc; 
+} 
+	/* center */
+.col_lower_c {
+	width: 144px; 
+	margin:  0 auto;
+	padding: 0; 
+	display: inline-block; 
+	* display: inline; 
+	* zoom: 1; 
+	vertical-align: top; 
+	border: solid 0px #ccc; 
+}
+
+	/* for jQuery innerfade 未使用 131112 */
+/*
+ul#screenshot li {
+	list-style-type: none; 
+}
+ul#screenshot li img{
+	vertical-align: bottom;
+}
+ul#snapshot li {
+	list-style-type: none; 
+}
+*/
+	/* for jQuery cycle 現在使用中 131112 */
+.pics { 
+	height: 100px; 
+	width: 128px; 
+	padding: 0; 
+	margin: 0 21px 5px 21px; 
+	overflow: hidden; 
+}
+
+.pics img { 
+	height: 100px; 
+	width: 128px; 
+	top:0; 
+	left:0; 
+}
+/*
+.pics { 
+	padding: 0; 
+	margin:  0 21px 5px 21px; 
+	overflow: hidden;
+	}
+
+.pics img { 
+    width: 128px;
+    top:0; left:0 ;
+}
+
+/* h_line */
+p#h_line{ 
+	margin:  10px 0 50px 0; 
+	padding: 0 0 0 0; 
+	text-align: center; 
+} 
+
+/*	リンクの下線を非表示にする
+*/
+.tdn {
+	text-decoration:none;
+}
+
+	/* 重なっていないとき */
+	/* a {color:#0170af;} */
+	a {color:#808080;} 
+	/* 重なったとき */
+	a:hover{color:#000099;}
+
+/*	フォーカスリングの非表示
+*/
+	a:focus {
+	outline:none; 
+}
+
+.border-ccc{
+	border: solid 0px #ccc; 
+}

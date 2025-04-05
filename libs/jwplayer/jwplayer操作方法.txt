@@ -1,0 +1,24 @@
+下記のwizardを用いて簡単に設定出来る。
+
+http://www.longtailvideo.com/jw-player/wizard
+
+<HEAD>内に下記の記述を追加。
+<HEAD>
+	<!-- jwplayer -->
+	<script type="text/javascript" src="js/jwplayer/js/jwplayer.js"></script>
+</HEAD>
+
+本文にwizardの下段部分に生成された記述をコピーして追加する。
+
+<div id="player_4473"></div>
+<script type="text/javascript">
+	jwplayer("player_4473").setup({
+		file: "image/fs/ss/source/Takeoff_wow.flv",
+		width: "320",
+		height: "240",
+		primary: "flash",
+		image: "image/fs/ss/thumb_Takeoff_wow.jpg"
+	});
+</script>
+
+

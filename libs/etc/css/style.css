@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.hover-link, .hover-xxxx {
+    text-decoration: none;
+    color: darkblue;
+    cursor: pointer;
+}
+
+.hover-link:hover, .hover-link.active,
+.hover-xxxx:hover, .hover-xxxx.active {
+    color: red;
+}
+
+#popup {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    white-space: pre-line; /* 改行を反映 */
+}
+
+#popup a {
+    display: block;
+    margin-top: 5px;
+    color: blue;
+}

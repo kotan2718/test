@@ -1,0 +1,111 @@
+
+/* picture change with fade */
+.pic_change_fade {
+	cursor: pointer;
+	display: block;
+	width: 640px;
+	height="480px";
+	background: url(../../../../image/fs/kz/source/pink_neko_P1020295_640_on.jpg) no-repeat 0 0;
+}
+
+/* 3 columns for sc_Tuamotu Group Top, Each Island
+*/
+div#three-col {
+	font-family:  'Times New Roman', serif; 
+	color: #808080; 
+	font-size: small; 
+	font-weight: bold;
+	width: 512px;
+	margin: 0 auto;
+	padding: 0; 
+	text-align: center; 
+	border: solid 0px #ccc; 
+}
+	/* left, right side */
+.col_upper_rl {
+	width: 164px; 
+	margin: 0 auto;
+	padding: 0; 
+	display: inline-block; 
+	* display: inline; 
+	* zoom: 1; 
+	vertical-align: middle;
+	border: solid 0px #ccc; 
+} 
+	/* center */
+.col_upper_c {
+	font-size: medium; 
+	width: 138px; 
+	margin:  0 auto;
+	padding: 0; 
+	display: inline-block; 
+	* display: inline; 
+	* zoom: 1; 
+	vertical-align: middle; 
+	border: solid 0px #ccc; 
+}
+	/* left, right side */
+.col_lower_rl {
+	width: 164px; 
+	margin: 0 auto;
+	padding: 0; 
+	display: inline-block; 
+	* display: inline; 
+	* zoom: 1; 
+	vertical-align: top;
+	border: solid 0px #ccc; 
+} 
+	/* center */
+.col_lower_c {
+	width: 144px; 
+	margin:  0 auto;
+	padding: 0; 
+	display: inline-block; 
+	* display: inline; 
+	* zoom: 1; 
+	vertical-align: top; 
+	border: solid 0px #ccc; 
+}
+
+	/* for jQuery innerfade 未使用 131112 */
+/*
+ul#screenshot li {
+	list-style-type: none; 
+}
+ul#screenshot li img{
+	vertical-align: bottom;
+}
+ul#snapshot li {
+	list-style-type: none; 
+}
+*/
+	/* for jQuery cycle 現在使用中 131112 */
+.pics { 
+	height: 100px; 
+	width: 128px; 
+	padding: 0; 
+	margin: 0 21px 5px 21px; 
+	overflow: hidden; 
+}
+
+.pics img { 
+	height: 100px; 
+	width: 128px; 
+	top:0; 
+	left:0; 
+}
+
+	/* for jQuery cycle 実験 131130 */
+.pics5 { 
+	height: 480px; 
+	width: 640px; 
+	padding: 0; 
+	margin: 0 21px 5px 21px; 
+	overflow: hidden; 
+}
+
+.pics5 img { 
+	height: 480px; 
+	width: 640px; 
+}
+

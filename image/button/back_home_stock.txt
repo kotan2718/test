@@ -1,0 +1,15 @@
+
+display: inline-brock を使って，"Back" "Snap Shots Top" などを並べると，
+bottom で高さの位置揃えをするようで，両者の height が異なると top がずれてしまう。
+ボタン用の画像に用いた font は Serifa-THで，小文字の "p" などが下に飛び出しているため，
+"Back" の height が15pxなのに対して，"Snap Shots Top" の方は17pxになっている。
+marginや，paddingで上下の位置揃えの調整をいろいろ試してみたが，全く変化しない。
+そこで，"Back" "Home" の画像の下に2pxの空きを入れて，"Snap Shots Top" と並べたとき，
+違和感がでないようにした。
+htmlでボタン名を変更するのは大変だし，
+"Back" 単体と，並べたときで微妙に縦位置が異なるのは，
+切り替えのときにずれた感じになるので，
+ファイル名は back_off.gif, back_on.gif ・ home_off.gif, home_on.gif を使った。
+
+今までのボタンは [back_home_stock] に格納した。
+

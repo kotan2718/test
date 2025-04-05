@@ -1,0 +1,76 @@
+/* 画面の余白を取り払う */
+* {margin:0; padding:0; outline:0}
+
+body#common-k {
+	background-image: url(../../../image/back/back_kz.gif);
+	background-color:#FFFFFF;
+	color: navy;
+	font-size:95%; font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+.pic-left990   {width:  990px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+
+div#main990  { width: 990px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
+
+.contents-2col-left {                   display: inline-block; * display: inline; * zoom: 1; vertical-align: middle;
+	padding-right: 20px;
+}
+
+.contents-2col-right {                  display: inline-block; * display: inline; * zoom: 1; vertical-align: middle;}
+
+.pb10 { padding-bottom: 10px; }
+.pb15 { padding-bottom: 15px; }
+.pb20 { padding-bottom: 20px; }
+.pb25 { padding-bottom: 25px; }
+.pb30 { padding-bottom: 30px; }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 170px 120px;
+  grid-template-rows: 25px;
+  justify-content: space-around;
+  text-align: left;
+/*  color:#fff; */
+}
+.grid-item{
+  line-height: 25px;
+/*  background-color: #fff; */
+}
+
+.grid2a {
+  display: grid;
+  grid-template-columns: 70px 220px;
+  grid-template-rows: 25px;
+  justify-content: space-around;
+  text-align: left;
+  border-color:red;
+}
+
+/* テキストエリア 複数入力 */
+.input-container {
+    display: flex;
+    align-items: flex-start; /* ラベルを上に揃える */
+}
+.input-container label {
+    width: 60px; /* ラベルの幅を固定 */
+    display: inline-block;
+    margin-top: -2px; /* テキストエリアとの垂直位置を調整 */
+}
+.input-container textarea {
+    padding: 5px 5px;
+    resize: none; /* テキストエリアのサイズ変更を無効化 */
+    width: 300px; /* テキストエリアの幅を指定 */
+    text-align: left;
+}
+.input-container2 label {
+    width: 110px; /* ラベルの幅を固定 */
+    display: inline-block;
+    margin-top: -2px; /* テキストエリアとの垂直位置を調整 */
+}
+.input-container2 textarea {
+    padding: 5px 5px;
+    resize: none; /* テキストエリアのサイズ変更を無効化 */
+    width: 245px; /* テキストエリアの幅を指定 */
+    text-align: left;
+}
+

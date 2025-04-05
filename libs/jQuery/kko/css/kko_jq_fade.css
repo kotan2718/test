@@ -1,0 +1,10 @@
+
+/* picture change with fade */
+.pic_change_fade {
+	cursor: pointer;
+	display: block;
+	width: 640px;
+	height="480px";
+	background: url(../../../../image/fs/kz/source/pink_neko_P1020295_640_on.jpg) no-repeat 0 0;
+}
+

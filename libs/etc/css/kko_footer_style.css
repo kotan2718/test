@@ -1,0 +1,54 @@
+/* 画面の余白を取り払う */
+/*
+* {margin:0; padding:0; outline:0}
+*/
+/* コンテンツが少なく垂直スクロールバーが出ないときでも
+画面の上下幅に合わせてフッターを表示領域最下部に配置する 
+*/
+
+html , body {
+    height: 100%;
+}
+
+#container {
+    width: 100%;
+
+    position: relative;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+.wrap {
+    padding-bottom: 40px;
+}
+.footer_bottom_fixed {
+    font-size: small; 
+    font-weight: normal; 
+    background: black;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+}
+.footer_bottom_fixed2 {
+    font-size: small; 
+    font-weight: normal; 
+/*    background: black;*/
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+}
+.footer_bottom_fixed2_col {
+    background: black;*/
+}
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="ja" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<title>設置サンプル2 - prettyPhoto</title>
+		<link rel="stylesheet" type="text/css" href="http://tuono034s.com/demo/global.css" />
+		<link href="http://tuono034s.com/demo/prettyPhoto/css/prettyPhoto.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript" src="http://tuono034s.com/demo/prettyPhoto/js/jquery-1.6.1.min.js"></script>
+		<script type="text/javascript" src="http://tuono034s.com/demo/prettyPhoto/js/jquery.prettyPhoto_s.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto();
+	});
+</script>
+	</head>
+	<body>
+
+		<div id="wrap">
+			<h1>設置サンプルだよ！（カスタマイズ後）</h1>
+			<p>参照：<a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></p>
+			
+			<h2>prettyPhoto　Lightbox clone for jQuery</h2>
+			<p>jquery.min.js　Version:  1.6.1<br />
+			jquery.prettyPhoto.js　Version:  3.1.4（修正したもの）</p>
+			<h3>Single image</h3>
+			<ul>
+				<li><a href="http://tuono034s.com/demo/prettyPhoto/a0001m.jpg" rel="prettyPhoto" title="gallery thumbnail1"><img src="http://tuono034s.com/demo/prettyPhoto/a0001.jpg" alt="焼肉1" width="481" height="319" /></a></li>
+			</ul>
+			<br />
+			<h3>Image gallery</h3>
+			<ul>
+				<li><a href="http://tuono034s.com/demo/prettyPhoto/a0002m.jpg" rel="prettyPhoto[gallery1]" title="gallery thumbnail2"><img src="http://tuono034s.com/demo/prettyPhoto/a0002.jpg" alt="焼肉2" width="481" height="319" /></a></li>
+				<li><a href="http://tuono034s.com/demo/prettyPhoto/a0003m.jpg" rel="prettyPhoto[gallery1]" title="gallery thumbnail3"><img src="http://tuono034s.com/demo/prettyPhoto/a0003.jpg" alt="焼肉3" width="318" height="481" /></a></li>
+				<li><a href="http://tuono034s.com/demo/prettyPhoto/a0004m.jpg" rel="prettyPhoto[gallery1]" title="gallery thumbnail4"><img src="http://tuono034s.com/demo/prettyPhoto/a0004.jpg" alt="焼肉4" width="481" height="360" /></a></li>
+			</ul>
+			<div class="clear"></div>
+			<div class="clear"></div>
+
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		</div>
+
+</body>
+</html>

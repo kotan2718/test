@@ -1,0 +1,265 @@
+
+/* 全ファイル共通項目 */
+
+/* font */
+/* 趣味のホームページだし，こんなのブラウザに任せればよい。
+   しかし，Shift-JIS と UTF-8 で，IE はやってくれるなぁ... */
+/*
+	body {
+		font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif; 
+		
+		font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','MS Pゴシック',sans-serif; 
+	}
+*/
+
+/* 
+	とはいえ，ブラウザデフォルトでは，IE と safari が欧文フォントで転ける。とても見難い。
+	そこで...下記サイトの設定で，かなり改善されることが判明。
+	
+	 "もうfont-familyで悩まないための2行" http://snippet-editor.com/2010/08/definitive-font-family.html
+	
+	HPの再構築が一段落したら，試してみたい。
+	
+	2013/07/29
+	OSが日本語の場合と英語の場合でブラウザで表示されるデフォルトフォントが異なるようだ。
+	最初は，IEのみの現象だと思ったが，FireFoxでは日本語モードでは欧文はsans-serifだが，英語モードではserifに変化する。
+	ということは，ごちゃごちゃいじっても仕方ないのかもしれない。
+	
+	body, textarea { font-size: 95%; word-spacing: 0.1em; letter-spacing: 0.0em; line-height: 120%;  font-family: sans-serif; }
+	input, select { font-size: 95%; word-spacing: 0.1em; letter-spacing: 0.0em; line-height: 120%;  font-family: sans-serif; }
+*/
+
+/*
+	2013/07/29
+	css_browser_selector_masterを使う場合は
+	各htmlファイルの<head>...</head>間に下記を記述し，
+	<!-- browser selector -->
+		<script type="text/javascript" src="libs/css_browser_selector_master/css_browser_selector.js"></script>
+	<!-- browser selector end -->
+	このファイルで
+	ie. body, textarea { font-size: 95%; word-spacing: 0.1em; letter-spacing: 0.0em; line-height: 120%;  font-family: sans-serif; }
+	などと指定しておくと，ブラウザ別の設定が出来るが，OSの対応言語でfontのstyleが変わるので，あまり意味がない...と思う。
+*/
+
+
+/* class指定項目 */
+
+
+/* 画像にカーソルが乗ったときボーダー色を変化させる
+*/
+
+	.change_border_color a img {border:2px solid #f0f0f0; }
+	.change_border_color a:hover img {border:2px solid #c8c8c8; }
+
+/* 上記の操作をjQueryでマウスオーバー時のブリンクに含めようと思ったが，
+   hover は，次のような処理をしているので，
+   マウスが乗る前の処理はできない。
+   
+    $("セレクタ").hover(function(){
+    マウスオーバーしたときの処理
+    },
+    function () {
+    マウスアウトしたときの処理
+    }
+    );
+    });
+
+  詳細は，   jQuery - kz - js - jq_kz_style.js を参照
+*/
+
+
+/*	カーソルオンで画像を透過
+*/
+
+	.img_trans a img {
+		-webkit-transition: 0.3s ease-in-out;
+	  	 -moz-transition: 0.3s ease-in-out;
+		 	-o-transition: 0.3s ease-in-out;
+				transition: 0.3s ease-in-out;
+	}
+	.img_trans a:hover img {
+		opacity: 0.6;
+		filter: alpha(opacity=60);
+}
+
+/*	カーソルオンで画像を切り替える
+*/
+
+	.pic_change_back a {
+		display: block;
+		width: 41px;
+		height: 15px;
+		background: url(../../../image/button/back_both.gif) no-repeat 0 0;
+	}
+	.pic_change_back a:hover {
+		background-position: 0 bottom;
+	}
+
+/* 
+WEB DESIGN LAB の 縦型メニューを使う場合：各ページのナビゲーション・タイトルの設定 2013.08.16
+.nav_main {
+	float: left;
+	width: 10%;
+	border: 0px solid #FF9900;
+}
+.title {
+	float: left;
+	width: 80%;
+	margin-left:auto;margin-right:auto;text-align:center;
+	border: 0px solid #FF9900;
+}
+.nav_sub {
+	float: right;
+	width: 10%;
+	border: 0px solid #FF9900;
+}
+*/
+
+/* float のクリア */
+.c-both { clear: both; }
+
+
+/* 汎用設定 2013.08.18
+*/
+/* カーソルが重なったときのリンク文字色の変更
+*/
+	/* 重なっていないとき */
+	/* a {color:#0170af;} */
+	a {color:#666;} 
+
+	/* 重なったとき */
+	a:hover{color:#000099;}
+
+/* フォーカスリングの非表示
+*/
+
+	a:focus {outline:none; }
+
+/*	センターリング	<- html5で TABLE の中などで用いる center="80%" が，全く使えなくなるまでは，保留? 2013.08.13
+*/
+.center{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center; 
+	border: 0px solid #FF9900;
+}
+.left { text-align:left; } 
+.right { text-align:right } 
+
+.pb0  { padding: 0 0 0 0; margin: 0 0 0 0; } 
+.pb10 { padding: 0 0 10px 0; margin: 0 0 0 0; } 
+.pb15 { padding: 0 0 15px 0; margin: 0 0 0 0; } 
+.pb20 { padding: 0 0 20px 0; margin: 0 0 0 0; } 
+.pb30 { padding: 0 0 30px 0; margin: 0 0 0 0; } 
+.pb40 { padding: 0 0 40px 0; margin: 0 0 0 0; } 
+.fwm {font-weight:medium;}
+.fwb {font-weight:bold;}
+.fss {font-size: small;}
+.fsm {font-size: medium;}
+.fs110 {font-size: 110%;}
+.fs105 {font-size: 105%;}
+.fs180 {font-size: 180%;}
+.fs225 {font-size: 225%;}
+.color-4s {color:#6b8e23;}
+.color-kotan {color:#9999aa;}
+
+/* body */
+body#common1 {
+	background-image: url(../../../image/back/back_kz.gif); 
+	background-color:#FFFFFF;
+	color: navy; 
+}
+body#common2 {
+	background-image: url(../../../image/back/back_ss.gif); 
+	background-color:#FFFFFF;
+	color: navy; 
+}
+
+/* header */
+	/* title */
+header p.title_4s_header { font-size: 110%; font-weight: bold; color: #6b8e23; padding: 0 0 10px 0; margin: 0 0 0 0;} 
+header p.title_4s_main { font-size: 225%; font-weight: bold; padding: 0 0 15px 0; margin: 0 0 0 0;} 
+header p.title_4s_author1 { font-size: 105%; font-weight: bold; color: #9999aa; padding: 0 0 30px 0; margin: 0 0 0 0;} 
+
+/* nav */
+
+div.navbox{
+	padding: 5px 0 1px 0;
+	border:solid 0px #CCC;
+	margin: -13px -5px 10px -5px;
+	background: #f0f0f0;
+}
+	* html div.navbox {		/* * html : for IE7 */ 
+		padding: 0px 0 1px 0;
+		border:solid 0px #CCC;
+		margin: 0px -5px 10px -5px;
+		background: #fff;
+	border-top: 3px solid #ccc; 
+	border-bottom: 3px solid #ccc; 
+	} 
+	*+html div.navbox {		/* *+html : for less than equal IE6 */  
+	padding: 0px 0 1px 0;
+	border:solid 0px #CCC;
+	margin: 0px -5px 10px -5px;
+	background: #fff;
+	border-top: 3px solid #ccc; 
+	border-bottom: 3px solid #ccc; 
+	} 
+
+/* logo */
+.logo_img{ 
+	float: left; 
+	text-align: left;
+	margin:  0   0    0 0; 
+	padding: 5px 30px 0 50px; 
+	border:solid 0px #CCC;
+}
+
+ul.menu {font-family:12px serif;}
+ul.menu {list-style:none; margin:0; padding:0}
+ul.menu * {margin:0; padding:0}
+ul.menu a {display:block; color:#aaa; text-decoration:none}
+ul.menu li {position:relative; float:left; margin-right:2px}
+ul.menu ul {position:absolute; top:26px; left:0; background:#d1d1d1; display:none; opacity:0; list-style:none}
+ul.menu ul li {position:relative; border:1px solid #fff; border-top:none; width:108px; margin:0 0 0 -1px}
+ul.menu ul li a {display:block; padding:3px 7px 5px; background-color:#d1d1d1}
+ul.menu ul li a:hover {color: #f00; background-color:#c5c5c5}
+ul.menu ul ul {left:108px; top:-1px}
+ul.menu .menulink {border:0px solid #aaa; padding:4px 7px 2px; font-weight:medium; background:none; width:94px}
+ul.menu .menulink:hover, ul.menu .menuhover {color: #f00; background:#d0d0d0}
+ul.menu .sub {text-align: left; background:#d1d1d1}
+ul.menu .topline {border-top:1px solid #aaa}
+
+/* main */
+div#main {
+	border: 1px solid #FF9900; 
+}
+
+table.table {
+	padding: 0 0 0 0 ; 
+	margin:  0 auto 0 auto ; 
+	text-align: center; 
+	border: 1px solid #ccc; 
+}
+
+/* footer */
+
+/** horizontal partition **/
+footer hr {
+	width: 70%;
+	height: 2px;
+}
+
+/** select button whole **/
+footer div { 
+	padding: 5px 0 0 0; 
+	margin:  0   0 0 0; 
+}
+
+/** select button **/
+footer p {
+	display: inline;
+	padding: 10px 0 0 0; 
+	margin:  0    0 0 0; 
+}
+
