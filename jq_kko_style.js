@@ -84,19 +84,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (isMobile()) { // スマホの場合
-                mainElement.id = "main480";
-                widthElement.className = "c_main480";
-                picLeftElement.className = "pic-left480";
-//                headerElement.className = "header_label480";
-                footerElement.className = "footer_label480";
+                mainElement.id = "main420";
+                widthElement.className = "c_main420";
+                picLeftElement.className = "pic-left420";
+//                headerElement.className = "header_label420";
+                footerElement.className = "footer_label420";
                 if (imageElements) {
                     imageElements.forEach(image => {
-                        image.style.width = "480px";
+                        image.style.width = "420px";
                     });
                 }
                 if (popupElement) {
                     popupElement.forEach(style => {
-                        width = "480px";
+                        width = "420px";
                     });
                 }
                 console.log('スマホの画面です。IDは変更されません。');
