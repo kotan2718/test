@@ -2,11 +2,19 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; URL=etc_Voyager.html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
+  <script>
+    // ページ読み込み時に実行
+    window.onload = function() {
+      const random = Math.floor(Math.random() * 100000); // 乱数生成（キャッシュ対策）
+      const targetUrl = `etc_Voyager.html?cache_buster=${random}`;
+      // 即座にリダイレクト
+      window.location.href = targetUrl;
+    };
+  </script>
 </head>
 <body>
-  <p>自動的に <a href="etc_Voyager.html">etc_Voyager.html</a>  に移動します。</p>
+  <p>自動的に <a id="redirect-link" href="etc_Voyager.html">etc_Voyager.html</a> に移動します。</p>
 </body>
 </html>
