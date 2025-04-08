@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const mainElement = document.getElementById("main920");
         const widthElement = document.querySelector(".c_main920");
         const picLeftElement = document.querySelector('.pic-left920');
-//        const headerElement = document.querySelector(".header_label920");
+        const headerElement = document.querySelector(".header_label920");
         const footerElement = document.querySelector(".footer_label920");
         const imageElements = document.querySelectorAll(".image-container > img");
         const popupElement = document.querySelector(".popup > width");
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 mainElement.id = "main420";
                 widthElement.className = "c_main420";
                 picLeftElement.className = "pic-left420";
-//                headerElement.className = "header_label420";
+                headerElement.className = "header_label420";
                 footerElement.className = "footer_label420";
                 if (imageElements) {
                     imageElements.forEach(image => {
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 mainElement.id = "main920";
                 widthElement.className = "c_main920";
                 picLeftElement.className = "pic-left920";
-//                headerElement.className = "header_label920";
+                headerElement.className = "header_label920";
                 footerElement.className = "footer_label920";
                 if (imageElements) {
                     imageElements.forEach(image => {
