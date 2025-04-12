@@ -11,15 +11,28 @@ body#common-k {
     background-image: url(../../../image/back/back_kko.gif); 
     background-color:#FFFFFF;
     color: navy; 
-    font-size:100%; font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+    font-size:95%; font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
 
-body#common-k_en {
+body#common-k_920 {
+    background-image: url(../../../image/back/back_kko.gif); 
+    background-color:#FFFFFF;
+    color: navy; 
+    font-size:100%; font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+body#common-k_420 {
     background-image: url(../../../image/back/back_kko.gif); 
     background-color:#FFFFFF;
     color: navy; 
     font-size:115%; font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
+body#common-k_400 {
+    background-image: url(../../../image/back/back_kko.gif); 
+    background-color:#FFFFFF;
+    color: navy; 
+    font-size:115%; font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
 body#common-k_g { /* green version */
     background-image: url(../../../image/back/back_kko_g.gif); 
     background-color:#FFFFFF;
@@ -53,9 +66,18 @@ div#main420  {
     text-align: center; 
     border: 0px solid #FF9900;
 }
+div#main400  { 
+    width: 400px;  
+    margin-left: auto;  margin-right: auto; 
+    padding-left: 10px; padding-right: 10px; 
+    text-align: center; 
+    border: 0px solid #FF9900;
+}
 .c_main920  { width: 920px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
 .c_main420  { width: 420px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
+.c_main400  { width: 400px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
 .pic-left420   {width:  420px; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
+.pic-left400   {width:  400px; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
 
 /*    ============== 
       *** header *** 
@@ -71,6 +93,14 @@ div#main420  {
 }
 .header_label420   { 
     width: 420px;
+    margin-left: 0;
+    margin-right: 0; 
+    text-align: center; 
+    background-color: #f0f0f0; 
+    border: 0px solid #FF9900;
+}
+.header_label400   { 
+    width: 400px;
     margin-left: 0;
     margin-right: 0; 
     text-align: center; 
@@ -117,13 +147,15 @@ ul.menu .menulink {border:0px solid #666; padding:4px 7px 2px; font-weight:mediu
 ul.menu .menulink:hover, ul.menu .menuhover {color: #f00; background:#d0d0d0}
 ul.menu .sub {text-align: left; background:#d1d1d1; width:98px}
 ul.menu .topline {border-top:1px solid #666}
-
-ul.menu_en {font-family: serif; font-size: 80%}
+/*
+ul.menu_en {font-family: serif; font-size: 95%}
 ul.menu_en {list-style:none; margin:0; padding:0}
 ul.menu_en * {margin:0; padding:0}
 ul.menu_en a {display:block; color:#666; text-decoration:none}
 ul.menu_en li {position:relative; float:left; margin-right:2px}
+*/
 /*ul.menu_en li.about {position:relative; float:right; margin-right:2px}*/
+/*
 ul.menu_en ul {position:absolute; top:26px; left:0; background:#d1d1d1; display:none; opacity:0; list-style:none}
 ul.menu_en ul li {position:relative; border:1px solid #fff; border-top:none; width:108px; margin:0 0 0 -1px}
 ul.menu_en ul li a {display:block; padding:3px 7px 5px; background-color:#d1d1d1}
@@ -133,7 +165,7 @@ ul.menu_en .menulink {border:0px solid #666; padding:4px 7px 2px; font-weight:me
 ul.menu_en .menulink:hover, ul.menu .menuhover {color: #f00; background:#d0d0d0}
 ul.menu_en .sub {text-align: left; background:#d1d1d1; width:98px}
 ul.menu_en .topline {border-top:1px solid #666}
-
+*/
 
 /*    ============== 
         *** footer *** 
@@ -151,6 +183,16 @@ ul.menu_en .topline {border-top:1px solid #666}
 }
 .footer_label420 {
     width: 420px;
+    font-size: small; 
+    font-weight: normal; 
+    color: gray; 
+    background-color: #000;
+    margin: 0 auto; 
+    text-align: center;
+    padding-top: 5px;
+}
+.footer_label400 {
+    width: 400px;
     font-size: small; 
     font-weight: normal; 
     color: gray; 

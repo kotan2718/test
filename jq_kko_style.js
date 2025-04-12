@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     // 画面幅を判定してクラスを切り替える
     function adjustLayout() {
+        const CommonElement = document.getElementById("common-k_920");
         const mainElement = document.getElementById("main920");
         const widthElement = document.querySelector(".c_main920");
         const picLeftElement = document.querySelector('.pic-left920');
@@ -84,23 +85,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (isMobile()) { // スマホの場合
-                mainElement.id = "main420";
-                widthElement.className = "c_main420";
-                picLeftElement.className = "pic-left420";
-                headerElement.className = "header_label420";
-                footerElement.className = "footer_label420";
+                CommonElement.id = "common-k_400";
+                mainElement.id = "main400";
+                widthElement.className = "c_main400";
+                picLeftElement.className = "pic-left400";
+                headerElement.className = "header_label400";
+                footerElement.className = "footer_label400";
                 if (imageElements) {
                     imageElements.forEach(image => {
-                        image.style.width = "420px";
+                        image.style.width = "400px";
                     });
                 }
                 if (popupElement) {
                     popupElement.forEach(style => {
-                        width = "420px";
+                        width = "400px";
                     });
                 }
                 console.log('スマホの画面です。IDは変更されません。');
             } else {  // PCの場合
+                CommonElement.id = "common-k_920";
                 mainElement.id = "main920";
                 widthElement.className = "c_main920";
                 picLeftElement.className = "pic-left920";
