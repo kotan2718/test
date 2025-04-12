@@ -11,7 +11,7 @@ body#common-k {
     background-image: url(../../../image/back/back_kko.gif); 
     background-color:#FFFFFF;
     color: navy; 
-    font-size:95%; font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+    font-size:100%; font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
 body#common-k_en {
     background-image: url(../../../image/back/back_kko.gif); 
@@ -46,10 +46,11 @@ body#common-p {
 }
 
 
-div#main920  { width: 920px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
-div#main480  { width: 480px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
+div#main420  { width: 420px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
 .c_main920  { width: 920px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
-.c_main480  { width: 480px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
+.c_main420  { width: 420px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
+.pic-left420   {width:  420px; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
+
 /*    ============== 
       *** header *** 
       ============== 
@@ -62,8 +63,8 @@ div#main480  { width: 480px;  margin-left: auto;  margin-right: auto; text-align
     background-color: #f0f0f0; 
     border: 0px solid #FF9900;
 }
-.header_label480   { 
-    width: 480px;
+.header_label420   { 
+    width: 420px;
     margin-left: 0;
     margin-right: 0; 
     text-align: center; 
@@ -126,8 +127,8 @@ ul.menu .topline {border-top:1px solid #666}
     text-align: center;
     padding-top: 5px;
 }
-.footer_label480 {
-    width: 480px;
+.footer_label420 {
+    width: 420px;
     font-size: small; 
     font-weight: normal; 
     color: gray; 
@@ -187,10 +188,12 @@ div#footer_label {
         -------------------- 
 */
 div#main     {                margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
+div#main480  { width: 480px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #009900;}
 div#main720  { width: 720px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #009900;}
 div#main760  { width: 760px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
 div#main800  { width: 800px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
 div#main880  { width: 880px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
+div#main920  { width: 920px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
 div#main960  { width: 960px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
 div#main990  { width: 990px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
 div#main1024 { width: 1024px; margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
@@ -203,6 +206,43 @@ hr.main {   width: 70%; height: 2px; border:none; background-color: #aaa; margin
 hr.main720 {width: 70%; height: 2px; border:none; background-color: #aaa; margin: 0px auto  0px auto;}
 hr.main800 {width: 70%; height: 2px; border:none; background-color: #aaa; margin: 0px auto  0px auto;}
 hr.main990 {width: 70%; height: 2px; border:none; background-color: #aaa; margin: 0px auto 20px auto;}
+
+/*    picture と その下にテキスト(自由な位置に配置したい)を含むボックスの配置 
+*/
+.pic-center320 {width:  320px; text-align:center; margin-left:auto; margin-right:auto; } /* Takeoff !? ... wow */
+.pic-left480   {width:  480px; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
+.pic-center480 {width:  480px; text-align:center; margin-left:auto; margin-right:auto; } 
+.pic-right480  {width:  480px; text-align:right;  margin-left:auto;                    } /* 4S_TAKEOKA */
+.pic-left640   {width:  640px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+.pic-center640 {width:  640px; text-align:center; margin-left:auto; margin-right:auto; } /* 多くのページで使用 */
+.pic-right640  {width:  640px; text-align:right;  margin-left:auto;                    } /* 多くのページで使用 */
+.pic-left720   {width:  720px; text-align:left;                     margin-right:auto; } /* 4S Bakersfield, mokuren */
+.pic-center720 {width:  720px; text-align:center; margin-left:auto; margin-right:auto; } /* 多くのページで使用 */
+.pic-right720  {width:  720px; text-align:right;  margin-left:auto;                    } /* 4S mokuren, SC Tuamotu A Rangiroa */
+.pic-left760   {width:  760px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+.pic-center760 {width:  760px; text-align:center; margin-left:auto; margin-right:auto; } 
+.pic-right760  {width:  760px; text-align:right;  margin-left:auto;                    } 
+.pic-left800   {width:  800px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+.pic-center800 {width:  800px; text-align:center; margin-left:auto; margin-right:auto; } /* 多くのページで使用 */
+.pic-right800  {width:  800px; text-align:right;  margin-left:auto;                    } /* 多くのページで使用 */
+.pic-left840   {width:  840px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+.pic-center840 {width:  840px; text-align:center; margin-left:auto; margin-right:auto; } /* SC Tuamotu Top */
+.pic-right840  {width:  840px; text-align:right;  margin-left:auto;                    } 
+.pic-left880   {width:  880px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+.pic-center880 {width:  880px; text-align:center; margin-left:auto; margin-right:auto; } /* 多くのページで使用 */
+.pic-right880  {width:  880px; text-align:right;  margin-left:auto;                    } /* SC Tuamotu E Amanu */
+.pic-left920   {width:  920px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+.pic-center920 {width:  920px; text-align:center; margin-left:auto; margin-right:auto; } /* 4S Urashima, SC Tuamotu A Arutua */
+.pic-right920  {width:  920px; text-align:right;  margin-left:auto;                    } 
+.pic-left960   {width:  960px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+.pic-center960 {width:  960px; text-align:center; margin-left:auto; margin-right:auto; } /* 4S Benishijimi */
+.pic-right960  {width:  960px; text-align:right;  margin-left:auto;                    } 
+.pic-left990   {width:  990px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
+.pic-center990 {width:  990px; text-align:center; margin-left:auto; margin-right:auto; } /* 4S mokuren */
+.pic-right990  {width:  990px; text-align:right;  margin-left:auto;                    } 
+.pic-left1024  {width: 1024px; text-align:left;                     margin-right:auto; } 
+.pic-center1024{width: 1024px; text-align:center; margin-left:auto; margin-right:auto; } /* 4S Benishijimi */
+.pic-right1024 {width: 1024px; text-align:right;  margin-left:auto;                    } 
 
 
 /*    ----------- 
@@ -604,43 +644,6 @@ div#attention p{
 /*    上下中央揃え
 */
 .vat {vertical-align: top;}        /* 未使用 */
-
-/*    picture と その下にテキスト(自由な位置に配置したい)を含むボックスの配置 
-*/
-.pic-center320 {width:  320px; text-align:center; margin-left:auto; margin-right:auto; } /* Takeoff !? ... wow */
-.pic-left480   {width:  480px; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
-.pic-center480 {width:  480px; text-align:center; margin-left:auto; margin-right:auto; } 
-.pic-right480  {width:  480px; text-align:right;  margin-left:auto;                    } /* 4S_TAKEOKA */
-.pic-left640   {width:  640px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
-.pic-center640 {width:  640px; text-align:center; margin-left:auto; margin-right:auto; } /* 多くのページで使用 */
-.pic-right640  {width:  640px; text-align:right;  margin-left:auto;                    } /* 多くのページで使用 */
-.pic-left720   {width:  720px; text-align:left;                     margin-right:auto; } /* 4S Bakersfield, mokuren */
-.pic-center720 {width:  720px; text-align:center; margin-left:auto; margin-right:auto; } /* 多くのページで使用 */
-.pic-right720  {width:  720px; text-align:right;  margin-left:auto;                    } /* 4S mokuren, SC Tuamotu A Rangiroa */
-.pic-left760   {width:  760px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
-.pic-center760 {width:  760px; text-align:center; margin-left:auto; margin-right:auto; } 
-.pic-right760  {width:  760px; text-align:right;  margin-left:auto;                    } 
-.pic-left800   {width:  800px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
-.pic-center800 {width:  800px; text-align:center; margin-left:auto; margin-right:auto; } /* 多くのページで使用 */
-.pic-right800  {width:  800px; text-align:right;  margin-left:auto;                    } /* 多くのページで使用 */
-.pic-left840   {width:  840px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
-.pic-center840 {width:  840px; text-align:center; margin-left:auto; margin-right:auto; } /* SC Tuamotu Top */
-.pic-right840  {width:  840px; text-align:right;  margin-left:auto;                    } 
-.pic-left880   {width:  880px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
-.pic-center880 {width:  880px; text-align:center; margin-left:auto; margin-right:auto; } /* 多くのページで使用 */
-.pic-right880  {width:  880px; text-align:right;  margin-left:auto;                    } /* SC Tuamotu E Amanu */
-.pic-left920   {width:  920px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
-.pic-center920 {width:  920px; text-align:center; margin-left:auto; margin-right:auto; } /* 4S Urashima, SC Tuamotu A Arutua */
-.pic-right920  {width:  920px; text-align:right;  margin-left:auto;                    } 
-.pic-left960   {width:  960px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
-.pic-center960 {width:  960px; text-align:center; margin-left:auto; margin-right:auto; } /* 4S Benishijimi */
-.pic-right960  {width:  960px; text-align:right;  margin-left:auto;                    } 
-.pic-left990   {width:  990px; text-align:left;                     margin-right:auto; } /* 多くのページで使用 */
-.pic-center990 {width:  990px; text-align:center; margin-left:auto; margin-right:auto; } /* 4S mokuren */
-.pic-right990  {width:  990px; text-align:right;  margin-left:auto;                    } 
-.pic-left1024  {width: 1024px; text-align:left;                     margin-right:auto; } 
-.pic-center1024{width: 1024px; text-align:center; margin-left:auto; margin-right:auto; } /* 4S Benishijimi */
-.pic-right1024 {width: 1024px; text-align:right;  margin-left:auto;                    } 
 
 /*    Tuamotu Group Top ImageMapStar は左寄せになるための配慮
 */
