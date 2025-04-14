@@ -1,0 +1,321 @@
+
+div#main420  { 
+    width: 420px;  
+    margin-left: auto;  margin-right: auto; 
+    padding-left: 10px; padding-right: 10px; 
+    text-align: center; 
+    border: 0px solid #FF9900;
+}
+
+/* index page layout */
+
+/* index title */
+p#index_title{ 
+    width: 230px; 
+    margin:  0; 
+    padding: 20px 0px 0px 10px; 
+    text-align: left; 
+    font-family: 'Times New Roman', serif; 
+    color: #000080; 
+    font-size: 180%; 
+    font-weight: bold;
+} 
+/* Japanese English title */
+p.index_je{ 
+    text-align: left; 
+    margin:  0; 
+    padding: 15px 0 10px 15px; 
+    font-family: 'Times New Roman', serif; 
+    color: #808080; 
+    font-size: 100%; 
+    font-weight: bold;
+} 
+
+/* navigation */
+
+/*    フォーカスリングの非表示
+*/
+    a:focus {outline:none; } 
+
+
+/** ul set up **/
+.nav-ul {
+    list-style-type: none; 
+    margin:  0; 
+    padding: 0 5px 0 10px;
+    border: solid 0px #ccc; 
+}
+
+/** li set up left side "What's New", "Links"... **/
+.nav-left {
+    float: left;
+    margin:  0; 
+    padding: 2px 0 3px 0;
+    border: solid 0px #ccc; 
+}
+
+/** li set up left side navigation img  **/
+.nav-left-img {
+    vertical-align: bottom;
+}
+
+/** li set up right side "NEW", "UPDATE" **/
+.nav-right-s { /* left side single */ 
+    float: left;
+    margin:  0; 
+    padding: 2px 0 3px 5px;
+    border: solid 0px #ccc; 
+}
+
+.nav-right-m { /* left side multi */ 
+    float: left;
+    margin:  0; 
+    padding: 15px 0 3px 5px;
+    border: solid 0px #ccc; 
+}
+
+/** li set up right side navigation img "NEW", "UPDATE" **/
+.nav-right-img {
+    vertical-align: bottom;
+}
+
+/* float のクリア */
+.c-both { clear: both; }
+
+/* index logo */
+p#index_logo{ 
+    text-align: left; 
+    margin:  0; 
+    padding: 50px 0 20px 0; 
+} 
+    * html p#index_logo { 
+    text-align: left; 
+    margin:  0; 
+    padding: 30px 0 20px 0; 
+    } 
+    *+html p#index_logo { 
+    text-align: left; 
+    margin:  0; 
+    padding: 30px 0 20px 0; 
+    } 
+
+/* date */
+p#index_date{ 
+    text-align: left; 
+    margin:  0; 
+    padding: 15px 5px 15px 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #808080; 
+    font-size: 100%; 
+    font-weight: normal;
+} 
+
+/* about Kz */
+p#about_Contral{ 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #808080; 
+    font-size: small; 
+/*
+    font-weight: normal;
+*/
+    margin: 0 0 15px 0; 
+    padding: 0; 
+    text-align: left; 
+} 
+
+/* copyright */
+p#index_copyright{ 
+    text-align: left; 
+    margin:  0; 
+    padding: 0 5px 0 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #999; 
+    font-size: 60%; 
+    font-weight: normal;
+} 
+
+/* window right */
+
+/* main title */
+p#main_title{ 
+    margin: 0; 
+    padding: 10px auto 0 auto; 
+    text-align: center; 
+} 
+
+/* main picture */
+p#main_pic{ 
+    margin:  0; 
+    padding: 30px 0px 0px 0px; 
+} 
+
+/* 2nd logo */
+p#logo2 {
+    font-family:  'Times New Roman', serif; 
+    color: #808080; 
+    font-size: 125%; 
+    font-weight: bold;
+    width:230px;
+    height:20px;
+    margin:  20px auto 25px auto; 
+    padding-right: 10px; 
+    text-align: center; 
+}
+
+/* 3 columns for sc_Tuamotu Group Top, Each Island
+*/
+div#three-col {
+    font-family:  'Times New Roman', serif; 
+    color: #808080; 
+    font-size: small; 
+    font-weight: bold;
+    width: 400px;
+    margin: 0 0;
+    padding: 0; 
+    text-align: center; 
+    border: solid 0px #ccc; 
+}
+    /* left, right side */
+.col_upper_rl {
+    width: 148px; 
+    margin: 0 0;
+    padding: 0; 
+    display: inline-block; 
+    * display: inline; 
+    * zoom: 1; 
+    vertical-align: middle;
+    border: solid 0px #ccc; 
+} 
+    /* center */
+.col_upper_c {
+    font-size: medium; 
+    width: 96px; 
+    margin:  0 0;
+    padding: 0; 
+    display: inline-block; 
+    * display: inline; 
+    * zoom: 1; 
+    vertical-align: middle; 
+    border: solid 0px #ccc; 
+}
+    /* left, right side */
+.col_lower_rl {
+    width: 96px; 
+    margin: 0 0;
+    padding: 0; 
+    display: inline-block; 
+    * display: inline; 
+    * zoom: 1; 
+    vertical-align: top;
+    border: solid 0px #ccc; 
+} 
+    /* center */
+.col_lower_c {
+    width: 96px; 
+    margin:  0 0;
+    padding: 0; 
+    display: inline-block; 
+    * display: inline; 
+    * zoom: 1; 
+    vertical-align: top; 
+    border: solid 0px #ccc; 
+}
+
+    /* for jQuery innerfade 未使用 131112 */
+/*
+ul#screenshot li {
+    list-style-type: none; 
+}
+ul#screenshot li img{
+    vertical-align: bottom;
+}
+ul#snapshot li {
+    list-style-type: none; 
+}
+*/
+    /* for jQuery cycle 現在使用中 131112 */
+.pics { 
+    height: 100px; 
+    width: 128px; 
+    padding: 0; 
+    margin: 0 10px 5px 10px; 
+    overflow: hidden; 
+}
+
+.pics img { 
+    height: 100px; 
+    width: 128px; 
+    top:0; 
+    left:0; 
+}
+/*
+.pics { 
+    padding: 0; 
+    margin:  0 21px 5px 21px; 
+    overflow: hidden;
+    }
+
+.pics img { 
+    width: 128px;
+    top:0; left:0 ;
+}
+
+/* h_line */
+p#h_line{ 
+    margin:  10px 0 50px 0; 
+    padding: 0 0 0 0; 
+    text-align: center; 
+} 
+
+/*    リンクの下線を非表示にする
+*/
+.tdn {
+    text-decoration:none;
+}
+
+    /* 重なっていないとき */
+    /* a {color:#0170af;} */
+    a {color:#808080;} 
+    /* 重なったとき */
+    a:hover{color:#000099;}
+
+/*    フォーカスリングの非表示
+*/
+    a:focus {
+    outline:none; 
+}
+
+.border-ccc{
+    border: solid 0px #ccc; 
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 205px 205px;
+  grid-template-rows: 190px;
+  justify-content: space-around;
+  text-align: left;
+/*  color:#fff; */
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: 205px 205px;
+  grid-template-rows: 200px;
+  justify-content: space-around;
+  text-align: left;
+/*  color:#fff; */
+}
+.grid2a {
+  display: grid;
+  grid-template-columns: 80px 300px;
+  grid-template-rows: 140px;
+  justify-content: space-around;
+  text-align: left;
+/*  color:#fff; */
+}
+.grid-item{
+/*  line-height: 15px;*/
+/*  background-color: #fff; */
+}
+
+
