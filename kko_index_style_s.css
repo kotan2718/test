@@ -1,13 +1,24 @@
 
-div#main420  { 
-    width: 420px;  
-    margin-left: auto;  margin-right: auto; 
-    padding-left: 10px; padding-right: 10px; 
-    text-align: center; 
-    border: 0px solid #FF9900;
+/* index page layout */
+
+body, html {
+    margin: 0;
+    padding: 0;
 }
 
-/* index page layout */
+#main420  { 
+    max-width: 420px;  
+    margin: auto;
+    padding-left: 10px; padding-right: 10px;
+    text-align: center; 
+}
+
+/* main title */
+p#main_title{ 
+    margin: 0; 
+    padding: auto; 
+    text-align: center; 
+} 
 
 /* index title */
 p#index_title{ 
@@ -17,7 +28,7 @@ p#index_title{
     text-align: left; 
     font-family: 'Times New Roman', serif; 
     color: #000080; 
-    font-size: 180%; 
+    font-size: 140%; 
     font-weight: bold;
 } 
 /* Japanese English title */
@@ -27,7 +38,7 @@ p.index_je{
     padding: 15px 0 10px 15px; 
     font-family: 'Times New Roman', serif; 
     color: #808080; 
-    font-size: 100%; 
+    font-size: 85%; 
     font-weight: bold;
 } 
 
@@ -82,72 +93,13 @@ p.index_je{
 /* float のクリア */
 .c-both { clear: both; }
 
-/* index logo */
-p#index_logo{ 
-    text-align: left; 
-    margin:  0; 
-    padding: 50px 0 20px 0; 
-} 
-    * html p#index_logo { 
-    text-align: left; 
-    margin:  0; 
-    padding: 30px 0 20px 0; 
-    } 
-    *+html p#index_logo { 
-    text-align: left; 
-    margin:  0; 
-    padding: 30px 0 20px 0; 
-    } 
-
-/* date */
-p#index_date{ 
-    text-align: left; 
-    margin:  0; 
-    padding: 15px 5px 15px 0; 
-    font-family: Arial, Helvetica, sans-serif;
-    color: #808080; 
-    font-size: 100%; 
-    font-weight: normal;
-} 
-
-/* about Kz */
-p#about_Contral{ 
-    font-family: Arial, Helvetica, sans-serif;
-    color: #808080; 
-    font-size: small; 
-/*
-    font-weight: normal;
-*/
-    margin: 0 0 15px 0; 
-    padding: 0; 
-    text-align: left; 
-} 
-
-/* copyright */
-p#index_copyright{ 
-    text-align: left; 
-    margin:  0; 
-    padding: 0 5px 0 0; 
-    font-family: Arial, Helvetica, sans-serif;
-    color: #999; 
-    font-size: 60%; 
-    font-weight: normal;
-} 
-
-/* window right */
-
-/* main title */
-p#main_title{ 
-    margin: 0; 
-    padding: 10px auto 0 auto; 
-    text-align: center; 
-} 
-
 /* main picture */
 p#main_pic{ 
-    margin:  0; 
-    padding: 30px 0px 0px 0px; 
+    text-align: left;
+    margin:  auto; 
+    padding-left: 10px; padding-right: auto;
 } 
+
 
 /* 2nd logo */
 p#logo2 {
@@ -164,20 +116,20 @@ p#logo2 {
 
 /* 3 columns for sc_Tuamotu Group Top, Each Island
 */
-div#three-col {
+.three-col {
     font-family:  'Times New Roman', serif; 
     color: #808080; 
     font-size: small; 
     font-weight: bold;
-    width: 400px;
+    width: 340px;
     margin: 0 0;
-    padding: 0; 
+    padding-left: 4px; 
     text-align: center; 
     border: solid 0px #ccc; 
 }
     /* left, right side */
 .col_upper_rl {
-    width: 148px; 
+    width: 48px; 
     margin: 0 0;
     padding: 0; 
     display: inline-block; 
@@ -191,31 +143,35 @@ div#three-col {
     font-size: medium; 
     width: 96px; 
     margin:  0 0;
-    padding: 0; 
+    padding: 0 10px 0 0; 
     display: inline-block; 
     * display: inline; 
     * zoom: 1; 
     vertical-align: middle; 
     border: solid 0px #ccc; 
 }
-    /* left, right side */
+    /* gallery title */
+
 .col_lower_rl {
     width: 96px; 
-    margin: 0 0;
-    padding: 0; 
+    height: 32px;
+    margin: auto;
+    padding-bottom: 15px; 
     display: inline-block; 
-    * display: inline; 
     * zoom: 1; 
     vertical-align: top;
+    text-align: left; 
     border: solid 0px #ccc; 
 } 
+
     /* center */
+
 .col_lower_c {
-    width: 96px; 
-    margin:  0 0;
-    padding: 0; 
+    width: 92px; 
+    height: 36px;
+    margin:  auto;
+    padding-right: 20px; 
     display: inline-block; 
-    * display: inline; 
     * zoom: 1; 
     vertical-align: top; 
     border: solid 0px #ccc; 
@@ -235,16 +191,16 @@ ul#snapshot li {
 */
     /* for jQuery cycle 現在使用中 131112 */
 .pics { 
-    height: 100px; 
-    width: 128px; 
+    height: 75px; 
+    width: 96px; 
     padding: 0; 
-    margin: 0 10px 5px 10px; 
+    margin: 0px 10px 5px 0px; 
     overflow: hidden; 
 }
 
 .pics img { 
-    height: 100px; 
-    width: 128px; 
+    height: 75px; 
+    width: 96px; 
     top:0; 
     left:0; 
 }
@@ -291,31 +247,76 @@ p#h_line{
 
 .grid2 {
   display: grid;
-  grid-template-columns: 205px 205px;
-  grid-template-rows: 190px;
-  justify-content: space-around;
-  text-align: left;
-/*  color:#fff; */
-}
-.grid2 {
-  display: grid;
-  grid-template-columns: 205px 205px;
+  grid-template-columns:  165px 2fr;
   grid-template-rows: 200px;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   text-align: left;
 /*  color:#fff; */
-}
-.grid2a {
-  display: grid;
-  grid-template-columns: 80px 300px;
-  grid-template-rows: 140px;
-  justify-content: space-around;
-  text-align: left;
-/*  color:#fff; */
-}
-.grid-item{
-/*  line-height: 15px;*/
-/*  background-color: #fff; */
 }
 
+.grid2a {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* レスポンシブに強くなる */
+  grid-template-rows: 120px;
+  column-gap: 10px; /* 必要なら調整 */
+  text-align: left;
+}
+
+.grid-item1 {
+  grid-column: 1/2;
+/*  background-color: #eee;*/
+}
+
+.grid-item2 {
+  grid-column: 2/3;
+/*  background-color: #ccc;*/
+}
+
+/* index logo */
+p#index_logo{ 
+    text-align: left; 
+    margin:  0; 
+    padding: 12px 0px  0px 10px; 
+} 
+
+    *+html p#index_logo { 
+    text-align: left; 
+    margin:  0; 
+    padding: 12px 0px 20px 10px; 
+    } 
+
+/* date */
+p#index_date{ 
+    text-align: left; 
+    margin:  0; 
+    padding: 15px 5px 15px 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #808080; 
+    font-size: 100%; 
+    font-weight: normal;
+} 
+
+/* about Kz */
+p#about_Contral{ 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #808080; 
+    font-size: small; 
+/*
+    font-weight: normal;
+*/
+    margin: 0 0 15px 0; 
+    padding: 0; 
+    text-align: left; 
+} 
+
+/* copyright */
+p#index_copyright{ 
+    text-align: left; 
+    margin:  0; 
+    padding: 0 5px 0 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #999; 
+    font-size: 60%; 
+    font-weight: normal;
+} 
 

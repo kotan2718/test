@@ -1,6 +1,19 @@
 
+/* for debug */
+body {
+  outline: 2px dashed red;
+  overflow-x: auto;
+}
+
 /* 画面の余白を取り払う */
+/*
 * {margin:0; padding:0; outline:0}
+*/
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 
 /*    ============ 
         *** body *** 
@@ -60,24 +73,26 @@ body#common-p {
 
 
 div#main420  { 
-    width: 420px;  
-    margin-left: auto;  margin-right: auto; 
+    max-width: 420px;  
+    margin: auto;
     padding-left: 10px; padding-right: 10px; 
     text-align: center; 
     border: 0px solid #FF9900;
+    box-sizing: border-box;
 }
 div#main400  { 
-    width: 400px;  
-    margin-left: auto;  margin-right: auto; 
+    max-width: 400px;  
+    margin: auto;
     padding-left: 10px; padding-right: 10px; 
     text-align: center; 
     border: 0px solid #FF9900;
+    box-sizing: border-box;
 }
 .c_main920  { width: 920px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
-.c_main420  { width: 420px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
-.c_main400  { width: 400px;  margin-left: auto;  margin-right: auto; text-align: center; border: 0px solid #FF9900;}
-.pic-left420   {width:  420px; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
-.pic-left400   {width:  400px; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
+.c_main420  { max-width: 100%; text-align: center; border: 0px solid #FF9900;}
+.c_main400  { max-width: 100%; text-align: center; border: 0px solid #FF9900;}
+.pic-left420   {max-width: 100%; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
+.pic-left400   {max-width: 100%; text-align:left;                     margin-right:auto; } /* MM_Ayutthaya */
 
 /*    ============== 
       *** header *** 
@@ -92,17 +107,13 @@ div#main400  {
     border: 0px solid #FF9900;
 }
 .header_label420   { 
-    width: 420px;
-    margin-left: 0;
-    margin-right: 0; 
+    max-width: 100%; 
     text-align: center; 
     background-color: #f0f0f0; 
     border: 0px solid #FF9900;
 }
 .header_label400   { 
-    width: 400px;
-    margin-left: 0;
-    margin-right: 0; 
+    max-width: 100%; 
     text-align: center; 
     background-color: #f0f0f0; 
     border: 0px solid #FF9900;
@@ -182,22 +193,20 @@ ul.menu_en .topline {border-top:1px solid #666}
     padding-top: 5px;
 }
 .footer_label420 {
-    width: 420px;
+    max-width: 100%; 
     font-size: small; 
     font-weight: normal; 
     color: gray; 
     background-color: #000;
-    margin: 0 auto; 
     text-align: center;
     padding-top: 5px;
 }
 .footer_label400 {
-    width: 400px;
+    max-width: 100%; 
     font-size: small; 
     font-weight: normal; 
     color: gray; 
     background-color: #000;
-    margin: 0 auto; 
     text-align: center;
     padding-top: 5px;
 }
@@ -1184,6 +1193,7 @@ input[type="checkbox"]:checked:before {
 /* --- 画像ポップアップ用のスタイル 20250312 --- */
 /* 画像コンテナ */
 .image-container {
+    max-width: 100%;
     display: inline-block;
 }
 /* ポップアップ画像 */

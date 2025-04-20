@@ -93,12 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 footerElement.className = "footer_label400";
                 if (imageElements) {
                     imageElements.forEach(image => {
-                        image.style.width = "400px";
+                        image.style.width = "100%";
                     });
                 }
                 if (popupElement) {
                     popupElement.forEach(style => {
-                        width = "400px";
+                        width = "85%";
                     });
                 }
                 console.log('スマホの画面です。IDは変更されません。');
